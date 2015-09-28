@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">Movie Details</string>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_sortby_key" translatable="false">SortBy</string>
+    <string name="pref_sortby_title">Sort By</string>
+    <string name="pref_sortby_popular" translatable="false">Popular</string>
+    <string name="pref_sortby_toprate" translatable="false">Top_Rated</string>
+    <string name="pref_sortby_default">@string/pref_sortby_popular</string>
+
+</resources>
