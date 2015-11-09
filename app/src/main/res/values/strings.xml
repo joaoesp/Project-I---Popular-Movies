@@ -11,6 +11,7 @@
     <string name="pref_sortby_title">Sort By</string>
     <string name="pref_sortby_popular" translatable="false">Popular</string>
     <string name="pref_sortby_toprate" translatable="false">Top_Rated</string>
+    <string name="pref_sortby_favorites" translatable="false">Favorites</string>
     <string name="pref_sortby_default">@string/pref_sortby_popular</string>
 
 </resources>

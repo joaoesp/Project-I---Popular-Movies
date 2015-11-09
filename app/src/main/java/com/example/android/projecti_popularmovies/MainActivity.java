@@ -1,21 +1,35 @@
 package com.example.android.projecti_popularmovies;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean mTwoPane;
+    private String mSortBY;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mSortBY = PreferenceManager.getDefaultSharedPreferences(this).
+                getString(getString(R.string.pref_sortby_key), getString(R.string.pref_sortby_default));
+
         setContentView(R.layout.activity_main);
-        if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new MovieFragment())
-                    .commit();
+        if(findViewById(R.id.fragment_detail) != null){
+            mTwoPane = true;
+            if(savedInstanceState == null){
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_detail, new DetailFragment())
+                        .commit();
+                Log.v(null, "asdjoasd");
+            }
+        }else{
+            mTwoPane = false;
         }
     }
 

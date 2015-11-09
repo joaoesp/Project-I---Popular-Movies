@@ -3,9 +3,11 @@
     <string-array name="sortBy_options">
         <item>@string/pref_sortby_popular</item>
         <item>@string/pref_sortby_toprate</item>
+        <item>@string/pref_sortby_favorites</item>
     </string-array>
     <string-array name="sortBy_values">
         <item>@string/pref_sortby_popular</item>
         <item>@string/pref_sortby_toprate</item>
+        <item>@string/pref_sortby_favorites</item>
     </string-array>
 </resources>

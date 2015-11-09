@@ -19,7 +19,6 @@ public class ImageAdapter extends BaseAdapter {
     private String baseUrl;
 
     public ImageAdapter(Context context, String[] images) {
-        this.mArrayImages = new String[20];
         this.mArrayImages = images;
         this.mContext = context;
         this.baseUrl = "http://image.tmdb.org/t/p/w500";
@@ -51,7 +50,11 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             imageView = (ImageView) convertView;
         }
-        Picasso.with(mContext).load(baseUrl+mArrayImages[position]).into(imageView);
+        if(mArrayImages[position]!=null) {
+            Picasso.with(mContext).load(baseUrl + mArrayImages[position]).into(imageView);
+        }else{
+            imageView.setVisibility(View.GONE);
+        }
         return imageView;
     }
 }

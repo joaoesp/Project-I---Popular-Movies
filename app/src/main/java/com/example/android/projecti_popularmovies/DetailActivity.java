@@ -7,15 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class DetailActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         if(savedInstanceState == null){
+
+            Bundle arguments = new Bundle();
+
+            DetailFragment fragment = new DetailFragment();
+
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new DetailActivityFragment())
+                    .add(R.id.fragment_detail, fragment)
                     .commit();
+
         }
     }
 
